@@ -1,0 +1,201 @@
+---
+source_epub: "CO-SDK-manual.epub"
+source_href: "contents.xhtml"
+source_file: "contents.xhtml"
+source_anchor: ""
+title: "Collabora Online SDK"
+canonical_title: "Collabora Online SDK"
+toc_level: "0"
+breadcrumbs: "Collabora Online SDK"
+---
+- [Back](https://sdk.collaboraonline.com/) [https://sdk.collaboraonline.com/]
+
+Intro
+
+- [Introduction](002_L0_Introduction.md)
+
+Setup and configuration
+
+- [Installation guide](003_L0_Installation_guide.md)
+  - [Installation from packages](004_L1_Installation_guide__Installation_from_packages.md)
+  - [Docker images](006_L1_Installation_guide__Docker_images.md)
+  - [CODE Docker image](010_L1_Installation_guide__CODE_Docker_image.md)
+  - [Collabora Online for Kubernetes](014_L1_Installation_guide__Collabora_Online_for_Kubernetes.md)
+  - [Collabora Online on OpenShift](021_L1_Installation_guide__Collabora_Online_on_OpenShift.md)
+  - [Fonts](027_L1_Installation_guide__Fonts.md)
+  - [Updating systemplate](030_L1_Installation_guide__Updating_systemplate.md)
+  - [Configuration](031_L1_Installation_guide__Configuration.md)
+  - [Proxy settings](053_L1_Installation_guide__Proxy_settings.md)
+- [Troubleshooting](058_L0_Troubleshooting.md)
+  - [Symptom-based Troubleshooting](059_L1_Troubleshooting__Symptom-based_Troubleshooting.md)
+  - [‘External data source not allowed’ when trying to insert content (image, clipboard paste).](065_L1_Troubleshooting__External_data_source_not_allowed_when_trying_to_insert_content_image_clipboard_paste.md)
+  - [Further symptoms](066_L1_Troubleshooting__Further_symptoms.md)
+  - [Package upgrade issues](072_L1_Troubleshooting__Package_upgrade_issues.md)
+  - [Diagnostic capabilities](074_L1_Troubleshooting__Diagnostic_capabilities.md)
+  - [Case studies](076_L1_Troubleshooting__Case_studies.md)
+- [Grammar checker (LanguageTool)](079_L0_Grammar_checker_LanguageTool.md)
+  - [Collabora Online](080_L1_Grammar_checker_LanguageTool__Collabora_Online.md)
+  - [LibreOffice Core](081_L1_Grammar_checker_LanguageTool__LibreOffice_Core.md)
+- [Translator (DeepL)](082_L0_Translator_DeepL.md)
+  - [Collabora Online](083_L1_Translator_DeepL__Collabora_Online.md)
+- [Available integrations](084_L0_Available_integrations.md)
+  - [Alfresco integration](085_L1_Available_integrations__Alfresco_integration.md)
+  - [Drupal integration](086_L1_Available_integrations__Drupal_integration.md)
+  - [EGroupware integration](087_L1_Available_integrations__EGroupware_integration.md)
+  - [Ilias integration](088_L1_Available_integrations__Ilias_integration.md)
+  - [Mattermost integration](089_L1_Available_integrations__Mattermost_integration.md)
+  - [Moodle integration](090_L1_Available_integrations__Moodle_integration.md)
+  - [Nextcloud integration](093_L1_Available_integrations__Nextcloud_integration.md)
+  - [Odoo integration](094_L1_Available_integrations__Odoo_integration.md)
+  - [ownCloud integration](095_L1_Available_integrations__ownCloud_integration.md)
+  - [Plone integration](096_L1_Available_integrations__Plone_integration.md)
+  - [SharePoint integration](097_L1_Available_integrations__SharePoint_integration.md)
+  - [WordPress™ integration](098_L1_Available_integrations__WordPress_integration.md)
+  - [XWiki integration](099_L1_Available_integrations__XWiki_integration.md)
+- [Integrations setup](100_L0_Integrations_setup.md)
+  - [ILIAS](101_L1_Integrations_setup__ILIAS.md)
+  - [Mattermost](106_L1_Integrations_setup__Mattermost.md)
+  - [Moodle](110_L1_Integrations_setup__Moodle.md)
+  - [Odoo](115_L1_Integrations_setup__Odoo.md)
+  - [SharePoint](119_L1_Integrations_setup__SharePoint.md)
+  - [WordPress™](124_L1_Integrations_setup__WordPress.md)
+- [Accessibility](129_L0_Accessibility.md)
+
+Integrating
+
+- [Introduction](130_L0_Introduction.md)
+- [Why integrate?](131_L0_Why_integrate.md)
+  - [Support](132_L1_Why_integrate__Support.md)
+- [Architecture](133_L0_Architecture.md)
+  - [WSD](134_L1_Architecture__WSD.md)
+  - [ForKit](135_L1_Architecture__ForKit.md)
+  - [Kit](136_L1_Architecture__Kit.md)
+  - [Kit Isolation](137_L1_Architecture__Kit_Isolation.md)
+  - [Architecture](138_L1_Architecture.md)
+  - [File System](139_L1_Architecture__File_System.md)
+  - [Client Connection](140_L1_Architecture__Client_Connection.md)
+  - [Tile Rendering](141_L1_Architecture__Tile_Rendering.md)
+  - [Protocol](142_L1_Architecture__Protocol.md)
+  - [Threading](143_L1_Architecture__Threading.md)
+  - [File Server](144_L1_Architecture__File_Server.md)
+  - [Communication Security](145_L1_Architecture__Communication_Security.md)
+- [How to integrate](146_L0_How_to_integrate.md)
+  - [Server for hosting Collabora Online](147_L1_How_to_integrate__Server_for_hosting_Collabora_Online.md)
+  - [Website that presents the editing capabilities](148_L1_How_to_integrate__Website_that_presents_the_editing_capabilities.md)
+  - [Authentication](149_L1_How_to_integrate__Authentication.md)
+  - [Connection to the file storage](150_L1_How_to_integrate__Connection_to_the_file_storage.md)
+  - [Re-using our development / demo-servers](151_L1_How_to_integrate__Re-using_our_development_demo-servers.md)
+  - [Further differences to WOPI](152_L1_How_to_integrate__Further_differences_to_WOPI.md)
+- [Step-by-step tutorial](153_L0_Step-by-step_tutorial.md)
+- [Simple examples](154_L0_Simple_examples.md)
+  - [Node.js example](155_L1_Simple_examples__Node.js_example.md)
+  - [PHP example](156_L1_Simple_examples__PHP_example.md)
+  - [Python example](157_L1_Simple_examples__Python_example.md)
+  - [ReactJS example](158_L1_Simple_examples__ReactJS_example.md)
+  - [.NET example](159_L1_Simple_examples__NET_example.md)
+- [Personal data flow](160_L0_Personal_data_flow.md)
+- [Cookies and local storage](161_L0_Cookies_and_local_storage.md)
+
+Customising
+
+- [Advanced integration](162_L0_Advanced_integration.md)
+  - [CheckFileInfo response properties](163_L1_Advanced_integration__CheckFileInfo_response_properties.md)
+  - [CheckFileInfo extended response properties](176_L1_Advanced_integration__CheckFileInfo_extended_response_properties.md)
+  - [PostMessage extensions](201_L1_Advanced_integration__PostMessage_extensions.md)
+  - [PutFile headers](203_L1_Advanced_integration__PutFile_headers.md)
+  - [Detecting external document change](204_L1_Advanced_integration__Detecting_external_document_change.md)
+  - [Checking for available features](205_L1_Advanced_integration__Checking_for_available_features.md)
+  - [Modifying discovery.xml](206_L1_Advanced_integration__Modifying_discovery.xml.md)
+  - [Override CheckFileInfo](207_L1_Advanced_integration__Override_CheckFileInfo.md)
+  - [Clipboard handling](208_L1_Advanced_integration__Clipboard_handling.md)
+  - [URL query parameters](211_L1_Advanced_integration__URL_query_parameters.md)
+  - [Content Security Policy](212_L1_Advanced_integration__Content_Security_Policy.md)
+  - [Full Screen](213_L1_Advanced_integration__Full_Screen.md)
+  - [WOPI proof](214_L1_Advanced_integration__WOPI_proof.md)
+  - [Update checker](215_L1_Advanced_integration__Update_checker.md)
+  - [Setup Settings iframe](218_L1_Advanced_integration__Setup_Settings_iframe.md)
+- [Theming of Collabora Online](228_L0_Theming_of_Collabora_Online.md)
+  - [How that works and how it looks](229_L1_Theming_of_Collabora_Online__How_that_works_and_how_it_looks.md)
+  - [User Interface modifications](230_L1_Theming_of_Collabora_Online__User_Interface_modifications.md)
+  - [Extra hidden field in COOL frame integration](231_L1_Theming_of_Collabora_Online__Extra_hidden_field_in_COOL_frame_integration.md)
+  - [Content of hidden field “css_variables”](232_L1_Theming_of_Collabora_Online__Content_of_hidden_field_css_variables.md)
+  - [How values are applied](233_L1_Theming_of_Collabora_Online__How_values_are_applied.md)
+  - [Available variables (Collabora Online branding theme)](234_L1_Theming_of_Collabora_Online__Available_variables_Collabora_Online_branding_theme.md)
+  - [Available variables (in-document UI)](239_L1_Theming_of_Collabora_Online__Available_variables_in-document_UI.md)
+  - [What it is, and how it looks](249_L1_Theming_of_Collabora_Online__What_it_is_and_how_it_looks.md)
+- [Server macros in Python](250_L0_Server_macros_in_Python.md)
+  - [Description](251_L1_Server_macros_in_Python__Description.md)
+  - [Background](252_L1_Server_macros_in_Python__Background.md)
+  - [Python script files](253_L1_Server_macros_in_Python__Python_script_files.md)
+  - [Instructions](254_L1_Server_macros_in_Python__Instructions.md)
+- [PostMessage API](257_L0_PostMessage_API.md)
+  - [Initialization](258_L1_PostMessage_API__Initialization.md)
+  - [Query](259_L1_PostMessage_API__Query.md)
+  - [Session Management](260_L1_PostMessage_API__Session_Management.md)
+  - [Actions](263_L1_PostMessage_API__Actions.md)
+  - [Version Restore](266_L1_PostMessage_API__Version_Restore.md)
+  - [Miscellaneous](269_L1_PostMessage_API__Miscellaneous.md)
+  - [Calling Python scripts](274_L1_PostMessage_API__Calling_Python_scripts.md)
+  - [Comments](277_L1_PostMessage_API__Comments.md)
+  - [Mentions](280_L1_PostMessage_API__Mentions.md)
+  - [Embedding Iframe](283_L1_PostMessage_API__Embedding_Iframe.md)
+
+APIs
+
+- [Conversion API](284_L0_Conversion_API.md)
+  - [Supported Input Formats](285_L1_Conversion_API__Supported_Input_Formats.md)
+  - [Supported Output Formats](286_L1_Conversion_API__Supported_Output_Formats.md)
+  - [Optional Parameters](287_L1_Conversion_API__Optional_Parameters.md)
+  - [Deprecated Parameters](293_L1_Conversion_API__Deprecated_Parameters.md)
+  - [Examples](296_L1_Conversion_API__Examples.md)
+- [Extract/Transform API](302_L0_ExtractTransform_API.md)
+  - [Data types](303_L1_ExtractTransform_API__Data_types.md)
+  - [General Usage](304_L1_ExtractTransform_API__General_Usage.md)
+  - [Content Controls](307_L1_ExtractTransform_API__Content_Controls.md)
+  - [Charts](312_L1_ExtractTransform_API__Charts.md)
+  - [Document Properties](317_L1_ExtractTransform_API__Document_Properties.md)
+  - [Tracked changes](322_L1_ExtractTransform_API__Tracked_changes.md)
+  - [Slides](325_L1_ExtractTransform_API__Slides.md)
+  - [JSON validity changes](330_L1_ExtractTransform_API__JSON_validity_changes.md)
+  - [Version updates](333_L1_ExtractTransform_API__Version_updates.md)
+- [Linking API](334_L0_Linking_API.md)
+
+Tech notes
+
+- [Copy and paste with PostMessage](335_L0_Copy_and_paste_with_PostMessage.md)
+  - [PostMessage](336_L1_Copy_and_paste_with_PostMessage__PostMessage.md)
+    - [Prerequisite](337_L2_Copy_and_paste_with_PostMessage__PostMessage__Prerequisite.md)
+    - [MIME Types](338_L2_Copy_and_paste_with_PostMessage__PostMessage__MIME_Types.md)
+  - [Copy](339_L1_Copy_and_paste_with_PostMessage__Copy.md)
+  - [Paste](340_L1_Copy_and_paste_with_PostMessage__Paste.md)
+    - [Text](341_L2_Copy_and_paste_with_PostMessage__Paste__Text.md)
+    - [HTML](342_L2_Copy_and_paste_with_PostMessage__Paste__HTML.md)
+    - [Markdown](343_L2_Copy_and_paste_with_PostMessage__Paste__Markdown.md)
+  - [Conclusion](344_L1_Copy_and_paste_with_PostMessage__Conclusion.md)
+
+More Information
+
+- [FAQ](345_L0_FAQ.md)
+  - [Which programs are included in the office suite?](346_L1_FAQ__Which_programs_are_included_in_the_office_suite.md)
+  - [Which formats can the programs of Collabora Online read?](347_L1_FAQ__Which_formats_can_the_programs_of_Collabora_Online_read.md)
+  - [In which formats can documents etc. be exported?](348_L1_FAQ__In_which_formats_can_documents_etc._be_exported.md)
+  - [Do the programs run in a browser and / or as local clients?](349_L1_FAQ__Do_the_programs_run_in_a_browser_and_or_as_local_clients.md)
+  - [Do the programs require an uninterrupted network connection?](350_L1_FAQ__Do_the_programs_require_an_uninterrupted_network_connection.md)
+  - [Can you add a storage system?](351_L1_FAQ__Can_you_add_a_storage_system.md)
+  - [Can you write and use your own plug-ins with the programs?](352_L1_FAQ__Can_you_write_and_use_your_own_plug-ins_with_the_programs.md)
+  - [High availability, fault tolerance, upgrade-ability?](353_L1_FAQ__High_availability_fault_tolerance_upgrade-ability.md)
+  - [Is it safe to restart the service without losing data?](354_L1_FAQ__Is_it_safe_to_restart_the_service_without_losing_data.md)
+  - [Do the documents leave the server?](355_L1_FAQ__Do_the_documents_leave_the_server.md)
+  - [What is CODE? Are there non-development editions too?](356_L1_FAQ__What_is_CODE_Are_there_non-development_editions_too.md)
+  - [What are the possibilities to test your products?](357_L1_FAQ__What_are_the_possibilities_to_test_your_products.md)
+  - [Can I host your product on my own environment?](358_L1_FAQ__Can_I_host_your_product_on_my_own_environment.md)
+- [Contact](https://www.collaboraoffice.com/about-us/) [https://www.collaboraoffice.com/about-us/]
+
+# Indices and tables
+
+- [Index](genindex.xhtml)
+- [Search Page](search.xhtml)
+
+# Source Code
+
+- [https://github.com/CollaboraOnline/online/](https://github.com/CollaboraOnline/online/)
