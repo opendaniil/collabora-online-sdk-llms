@@ -1,0 +1,91 @@
+# Collabora Online SDK Documentation
+
+> Parsed Markdown corpus of the Collabora Online SDK documentation, focused on integrating Collabora Online as the WOPI client/editor with your product as the WOPI host/server. Prioritize the WOPI host flow, iframe integration, CheckFileInfo semantics, PostMessage, and deployment/config topics.
+
+Use this file as a curated map of the parsed corpus. Collabora Online is the WOPI client, browser editor, and rendering server. Your backend/product is the WOPI host/server and owns authentication, permissions, document storage, access tokens, business authorization, and save/version behavior.
+
+Links in this file are repository-relative. Resolve paths such as `articles/...` relative to the repository root: https://github.com/opendaniil/collabora-online-sdk-llms
+
+## Start Here
+- [Collabora Online SDK](articles/001_L0_Collabora_Online_SDK.md): Corpus table of contents and the fastest high-level map of the documentation.
+- [Introduction](articles/002_L0_Introduction.md): Product-level introduction to what Collabora Online is and how it is positioned.
+- [Introduction](articles/130_L0_Introduction.md): Integration-oriented introduction that clearly defines Collabora as the WOPI client and your product as the WOPI host.
+- [Architecture](articles/133_L0_Architecture.md): High-level server/process architecture for the editor and rendering stack.
+- [Step-by-step tutorial](articles/153_L0_Step-by-step_tutorial.md): Best end-to-end onboarding path from discovery through CheckFileInfo and PutFile.
+
+## WOPI Host Integration
+- [Server for hosting Collabora Online](articles/147_L1_How_to_integrate__Server_for_hosting_Collabora_Online.md): Deployment expectations for the Collabora server side of the integration.
+- [Website that presents the editing capabilities](articles/148_L1_How_to_integrate__Website_that_presents_the_editing_capabilities.md): How the host app builds the iframe from discovery.xml and WOPISrc.
+- [Authentication](articles/149_L1_How_to_integrate__Authentication.md): access_token model, token passing, and session expiry behavior.
+- [Connection to the file storage](articles/150_L1_How_to_integrate__Connection_to_the_file_storage.md): Core WOPI host/server contract for token generation, GetFile, PutFile, CheckFileInfo, Save As, and rename.
+- [Further differences to WOPI](articles/152_L1_How_to_integrate__Further_differences_to_WOPI.md): Collabora-specific WOPI extensions and conflict/save semantics beyond the baseline protocol.
+- [Advanced integration](articles/162_L0_Advanced_integration.md): Entry point for Collabora-specific integration features layered on top of the WOPI-like protocol.
+- [WOPI proof](articles/214_L1_Advanced_integration__WOPI_proof.md): Verifying that WOPI requests actually come from the expected Collabora server.
+
+## CheckFileInfo and Save Semantics
+- [PostMessageOrigin](articles/167_L2_Advanced_integration__CheckFileInfo_response_properties__PostMessageOrigin.md): Required origin binding for safe PostMessage communication between host and editor.
+- [SupportsRename](articles/169_L2_Advanced_integration__CheckFileInfo_response_properties__SupportsRename.md): Declares whether rename is supported by the WOPI host.
+- [UserCanRename](articles/171_L2_Advanced_integration__CheckFileInfo_response_properties__UserCanRename.md): Per-user permission gate for rename when rename is supported.
+- [UserCanWrite](articles/172_L2_Advanced_integration__CheckFileInfo_response_properties__UserCanWrite.md): Controls whether the current session is editable.
+- [UserCanNotWriteRelative](articles/173_L2_Advanced_integration__CheckFileInfo_response_properties__UserCanNotWriteRelative.md): Governs Save As support for the current document/session.
+- [DownloadAsPostMessage](articles/192_L2_Advanced_integration__CheckFileInfo_extended_response_properties__DownloadAsPostMessage.md): Redirects print/export flows into the host application.
+- [SaveAsPostmessage](articles/193_L2_Advanced_integration__CheckFileInfo_extended_response_properties__SaveAsPostmessage.md): Host-controlled Save As flow via PostMessage.
+- [PutFile headers](articles/203_L1_Advanced_integration__PutFile_headers.md): Save metadata for autosave, explicit save, exit save, and user modification state.
+- [Detecting external document change](articles/204_L1_Advanced_integration__Detecting_external_document_change.md): Handling storage changes while a document is already being edited.
+- [Override CheckFileInfo](articles/207_L1_Advanced_integration__Override_CheckFileInfo.md): Hidden-form override mechanism for selected CheckFileInfo behavior at iframe setup time.
+
+## iframe and Frontend Integration
+- [Website that presents the editing capabilities](articles/148_L1_How_to_integrate__Website_that_presents_the_editing_capabilities.md): Main iframe embedding entrypoint for document editing.
+- [Step-by-step tutorial](articles/153_L0_Step-by-step_tutorial.md): Practical first iframe/form-post example for opening documents.
+- [Setup Settings iframe](articles/218_L1_Advanced_integration__Setup_Settings_iframe.md): Embedding a settings/admin UI backed by WOPI-host-managed settings storage.
+- [Connect to File Storage](articles/221_L2_Advanced_integration__Setup_Settings_iframe__Connect_to_File_Storage.md): Settings-iframe storage contract from the WOPI host side.
+- [Fetch settings](articles/222_L2_Advanced_integration__Setup_Settings_iframe__Fetch_settings.md): Read-side settings endpoint contract.
+- [Upload settings](articles/223_L2_Advanced_integration__Setup_Settings_iframe__Upload_settings.md): Write/upload flow for user or shared settings.
+- [Browser settings](articles/225_L2_Advanced_integration__Setup_Settings_iframe__Browser_settings.md): Persisting UI preferences via the WOPI host rather than browser-local storage.
+- [Theming Settings iframe](articles/226_L2_Advanced_integration__Setup_Settings_iframe__Theming_Settings_iframe.md): Theme-related settings integration via the settings iframe.
+- [Adjusting iframe height](articles/227_L2_Advanced_integration__Setup_Settings_iframe__Adjusting_iframe_height.md): Layout details for embedded iframe UX.
+- [Content Security Policy](articles/212_L1_Advanced_integration__Content_Security_Policy.md): CSP considerations for embedding and integration hardening.
+- [Full Screen](articles/213_L1_Advanced_integration__Full_Screen.md): Fullscreen behavior and host integration considerations.
+
+## PostMessage API
+- [PostMessage API](articles/257_L0_PostMessage_API.md): Main entrypoint for host/editor messaging, message envelope, and readiness semantics.
+- [Initialization](articles/258_L1_PostMessage_API__Initialization.md): Startup handshake and early message exchange expectations.
+- [Query](articles/259_L1_PostMessage_API__Query.md): Query-style message patterns between WOPI host and editor.
+- [WOPI host to editor](articles/264_L2_PostMessage_API__Actions__WOPI_host_to_editor.md): Commands the host can actively send into the editor.
+- [WOPI editor to host Response](articles/265_L2_PostMessage_API__Actions__WOPI_editor_to_host_Response.md): Response/event side of the action flow back to the host.
+- [Editor to WOPI host](articles/273_L2_PostMessage_API__Miscellaneous__Editor_to_WOPI_host.md): Important callbacks like UI_SaveAs, UI_InsertGraphic, UI_PickLink, and document-opening requests.
+- [Embedding Iframe](articles/283_L1_PostMessage_API__Embedding_Iframe.md): iframe-specific message flow such as dynamic height coordination.
+- [App_LoadingStatus](articles/202_L2_Advanced_integration__PostMessage_extensions__App_LoadingStatus.md): Additional loading-state signal useful for host UX and orchestration.
+
+## Deployment and Server Operations
+- [Installation guide](articles/003_L0_Installation_guide.md): Main operational entrypoint for installing and running Collabora Online.
+- [Configuration](articles/031_L1_Installation_guide__Configuration.md): Core `coolwsd.xml` settings surface.
+- [Proxy settings](articles/053_L1_Installation_guide__Proxy_settings.md): Reverse proxy overview and deployment entrypoint.
+- [Reverse proxy with Nginx webserver](articles/055_L2_Installation_guide__Proxy_settings__Reverse_proxy_with_Nginx_webserver.md): Common production proxy setup for Nginx.
+- [Reverse proxy with Apache 2 webserver](articles/054_L2_Installation_guide__Proxy_settings__Reverse_proxy_with_Apache_2_webserver.md): Apache-based proxy setup.
+- [Load balancing](articles/056_L2_Installation_guide__Proxy_settings__Load_balancing.md): Multi-instance routing and load-balancing concerns.
+- [‘Unauthorized WOPI host error’ when opening a file.](articles/064_L2_Troubleshooting__Symptom-based_Troubleshooting__Unauthorized_WOPI_host_error_when_opening_a_file.md): Common misconfiguration when the host is not allowed in `coolwsd.xml`.
+- [Checking network connectivity between Collabora Online and the WOPI host](articles/075_L2_Troubleshooting__Diagnostic_capabilities__Checking_network_connectivity_between_Collabora_Online_and_the_WOPI_host.md): Network-debug checklist for Collabora-to-host connectivity.
+
+## Conversion and Document Structure APIs
+- [Conversion API](articles/284_L0_Conversion_API.md): Top-level convert-to endpoint and its access restrictions.
+- [Examples](articles/296_L1_Conversion_API__Examples.md): Practical examples for conversion requests and parameters.
+- [Extract/Transform API](articles/302_L0_ExtractTransform_API.md): Top-level entrypoint for document-structure extraction and transformation.
+- [General Usage](articles/304_L1_ExtractTransform_API__General_Usage.md): Main request model for extract/transform workflows.
+- [Content Controls](articles/307_L1_ExtractTransform_API__Content_Controls.md): First concrete Writer structure example.
+- [Document Properties](articles/317_L1_ExtractTransform_API__Document_Properties.md): Metadata-oriented extract/transform example.
+- [Tracked changes](articles/322_L1_ExtractTransform_API__Tracked_changes.md): Revision-oriented extraction workflow.
+- [Slides](articles/325_L1_ExtractTransform_API__Slides.md): Impress/presentation structure support.
+- [JSON validity changes](articles/330_L1_ExtractTransform_API__JSON_validity_changes.md): Compatibility note for consumers of extracted JSON.
+
+## Optional
+- [Available integrations](articles/084_L0_Available_integrations.md): Survey of existing ecosystem integrations for orientation, not core onboarding.
+- [Integrations setup](articles/100_L0_Integrations_setup.md): Product-specific setup guides for known integrations like Moodle, SharePoint, and WordPress.
+- [Simple examples](articles/154_L0_Simple_examples.md): Language-specific starter examples after the core WOPI model is understood.
+- [How that works and how it looks](articles/229_L1_Theming_of_Collabora_Online__How_that_works_and_how_it_looks.md): Theming overview for custom UI appearance.
+- [Available variables (Collabora Online branding theme)](articles/234_L1_Theming_of_Collabora_Online__Available_variables_Collabora_Online_branding_theme.md): Branding-theme variable reference.
+- [Available variables in-document UI](articles/239_L1_Theming_of_Collabora_Online__Available_variables_in-document_UI.md): In-editor theme variable reference.
+- [Copy and paste with PostMessage](articles/335_L0_Copy_and_paste_with_PostMessage.md): Narrower advanced topic for custom clipboard bridges.
+- [Server macros in Python](articles/250_L0_Server_macros_in_Python.md): Specialized server-side scripting feature outside the main WOPI path.
+- [What is CODE? Are there non-development editions too?](articles/356_L1_FAQ__What_is_CODE_Are_there_non-development_editions_too.md): Packaging and edition clarification.
+- [Can I host your product on my own environment?](articles/358_L1_FAQ__Can_I_host_your_product_on_my_own_environment.md): Hosting/deployment clarification.
